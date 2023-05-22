@@ -90,15 +90,106 @@ header {
 
     &__title {
         padding: 15px 0px;
+        font-weight: 700;
+        font-size: 24px;
 
     }
 
     &__choix{
         padding: 15px;
         margin: 5px 0px;
+        font-size: 16px;
+        font-weight: 700;
 
         border-radius: 39px;
     background-color: #F6F6F6;
 
     }
+}
+
+.fa-grey {
+    color: grey;
+}
+
+.fa-margin {
+    margin: 0px 10px;
+}
+.fa-store {
+    color: var(--main-color) ;
+}
+
+
+/******** section 3 restaurant ******/
+
+.temporaire {
+    background: #F6F6F6;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.restaurant{
+
+    width: 80%;
+    min-width: 200px;
+    min-height: 200px;
+    margin-bottom: 15px;
+    background-color: white;
+    text-decoration: none;
+
+        &__img{
+            width: 100%;
+            height: 108px;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: contain;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+
+            &--title{
+                padding-bottom: 5px;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            &--content {
+                padding-bottom: 5px;
+                font-weight: 300;
+                font-size: 17px;
+            }
+        }
+}
+
+
+/******** footer *******/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #353535;
+
+        &__title {
+            padding: 20px 15px ;
+            font-size: 18px;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column ;
+
+            &--fin {
+                padding: 5px 15px ;
+                font-size: 16px;
+            }
+        }
+    .fa-margin-footer {
+        padding-right: 10px;
+    }
+
 }
