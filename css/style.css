@@ -28,26 +28,60 @@ header {
 .exploration {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
 }
 .exploration__location {
   background-color: #EAEAEA;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0px;
+  font-size: 16px;
 }
 .exploration__title {
   font-weight: 700;
+  font-size: 24px;
+  padding: 15px;
+  display: inline-block;
+  justify-content: center;
+}
+.exploration__content {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
 }
 .exploration__link {
   margin: 20px 0px;
   padding: 28px 40px;
-  background-color: linear-gradient(to right, var(--main-color), var(--second-color));
   font-weight: 700;
+  font-size: 16px;
   border-style: solid;
   border-width: 2px;
   border-radius: 39px;
   box-sizing: border-box;
-  align-items: center;
   text-decoration: none;
+  background: linear-gradient(to top, var(--main-color), var(--secondary-color));
+  color: white;
+}
+
+/******* section 2 fonctionnement *******/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement__title {
+  padding: 15px 0px;
+}
+.fonctionnement__choix {
+  padding: 15px;
+  margin: 5px 0px;
+  border-radius: 39px;
+  background-color: #F6F6F6;
 }
 
 /*# sourceMappingURL=style.css.map */
