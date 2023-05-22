@@ -103,42 +103,64 @@ header {
 /******** section 3 restaurant ******/
 .temporaire {
   background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
   background-color: white;
   border-radius: 20px;
-  padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 .restaurant {
-  width: 80%;
+  width: 90%;
   min-width: 200px;
-  min-height: 200px;
+  height: 400px;
   margin-bottom: 15px;
-  background-color: white;
-  text-decoration: none;
 }
 .restaurant__img {
   width: 100%;
-  height: 108px;
+  height: 300px;
   border-radius: 20px 20px 0px 0px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .restaurant__content {
   display: flex;
   justify-content: space-between;
+  color: black;
 }
-.restaurant__content--title {
-  padding-bottom: 5px;
+.restaurant__content--flex {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.restaurant__content--flex--title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 28px;
+  margin: 0px;
+  margin-top: 10px;
 }
-.restaurant__content--content {
-  padding-bottom: 5px;
+.restaurant__content--flex--content {
+  margin: 0px;
+  margin-top: 10px;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 27px;
+}
+.restaurant__content--heart {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-heart {
+  font-size: 30px;
 }
 
 /******** footer *******/
