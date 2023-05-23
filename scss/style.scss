@@ -26,55 +26,64 @@ header {
     justify-content: center;
 }
 
+
 /***** section 1 exploration ****/
 
 .exploration {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center;   
     background-color: #F6F6F6;
+    text-align: center;
     
         &__location{
             background-color: #EAEAEA;
-            display: flex;
-            align-items: stretch;
+            display: flex;            
             justify-content: center;
             width: 100%;
             padding: 15px 0px;
             font-size: 16px;
+
+            .fa-location-dot {
+                padding: 0px 10px;
+            }
         }
 
         &__title{
             font-weight: 700;
             font-size: 24px;
             padding: 15px ;
-            display: inline-block;
-            justify-content: center;
+            
         }
 
         &__content{
             padding: 15px ;
             font-size: 18px;
             font-weight: 300;
-            justify-content: center;
-            align-items: center;
+           
         }
 
         &__link{
             margin: 20px 0px;
-	        padding: 28px 40px;
+	        padding: 15px 20px;
            
-	            
+	        
             font-weight: 700;
             font-size: 16px;
 
-        	border-style: solid;
-	        border-width: 2px;
 	        border-radius: 39px;
 
 	        box-sizing: border-box;
             text-decoration: none;
+
+            box-shadow: 1px 5px 10px grey;
+
+            transition-duration: 1s;            
+
+                &:hover {
+                    opacity: 0.8 ;
+                    box-shadow: none;
+                }
 
 
     background: linear-gradient(to top, var(--main-color), var(--secondary-color));
@@ -87,6 +96,8 @@ header {
 .fonctionnement{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 50px;
 
     &__title {
         padding: 15px 0px;
@@ -96,12 +107,14 @@ header {
     }
 
     &__choix{
-        padding: 15px;
-        margin: 5px 0px;
+        padding: 25px 20px;
+        
+        margin: 10px 0px;
         font-size: 16px;
         font-weight: 700;
 
-        border-radius: 39px;
+        box-shadow: 1px 5px 10px grey;
+        border-radius: 20px;
     background-color: #F6F6F6;
 
     }
@@ -121,11 +134,28 @@ header {
 
 /******** section 3 restaurant ******/
 
-.temporaire {
+.liste {
     background: #F6F6F6;
     display: flex;
     flex-direction: column;
-   align-items: center;
+    padding-bottom: 70px;
+
+        &__restaurant{
+            padding-top: 60px;
+            padding-bottom: 40px ;
+            padding-left: 30px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+    
+   
+}
+
+
+.card__flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .card {
@@ -138,7 +168,7 @@ header {
     width: 90%;
     min-width: 200px;
     height: 400px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
    
    
 
@@ -163,7 +193,7 @@ header {
                  &--title{
                 
                 font-weight: 700;
-                font-size: 28px;
+                font-size: 18px;
                 margin: 0px;
                 margin-top: 10px;
                 
@@ -175,7 +205,7 @@ header {
                 margin: 0px;
                 margin-top: 10px;
                 font-weight: 300;
-                font-size: 27px;
+                font-size: 17px;
                  }
 
            }
@@ -184,6 +214,9 @@ header {
             flex-wrap: wrap;
             align-content: center;
             width: 50px;
+            
+
+            
            }
         }
 }
@@ -193,6 +226,14 @@ header {
 
  .fa-heart {
     font-size: 30px;
+    color: #99e2d0;
+    content: var(---third-color);
+ }
+
+ .temporaire {    
+    
+    color:  linear-gradient(to top, var(--main-color), var(--secondary-color));
+
  }
 
 /******** footer *******/
@@ -202,6 +243,7 @@ header {
     flex-direction: column;
     color: white;
     background: #353535;
+    padding-bottom: 20px;
 
         &__title {
             padding: 20px 15px ;
