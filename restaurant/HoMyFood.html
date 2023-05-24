@@ -3,129 +3,167 @@
 
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="../css/style_restaurant.css ">
 <script src="https://kit.fontawesome.com/39a98d775a.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
 <title>OhMyFood</title>
 </head>
 
 <body>
+
+<div class="main-container">
     <header>
-        <i class="fa-solid fa-arrow-left"></i>
+        
+        <i class="fa-solid fa-arrow-left" ></i>
+         <div class="header__flex"><h1 class="title">OmhmyFood</h1> </div>
     </header>
+
+    
         <main>
 
-            <img src="" alt="">
+            <img class="img" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
 
-            <section>
-                <div>
-                    <i class="fa-solid fa-heart"></i>
+            <section class="menu position ">
+                <div class="menu__flex">
+                    <span class="menu__flex--title">La palette de gout du gout</span> <i class="fa-solid fa-heart"></i>
                 </div>
 
-                <article>
-                    <h2>Entré</h2>     
-                        <a class="" href="">
-                            <div >
-                                <h3 class="">Fricassée d'escargots</h3>
+                <article >
+                    <h2> <span class="temps"> Entré </span></h2>     
+                    <div class="card__flex">
+                       
+                        <a class="card composition" href="">
+                         <div class="composition__flex">
+                            <h3 class="composition__flex--title">Fricassée d'escargots</h3>
+                            <div class="composition__flex--content">
+                                <p class="composition__flex--content--ingrédient"> Au piment d'Espelette
+                                <div class="composition__flex--content--ingrédient--prix"> 25€</div>
+                                </p>  
                             </div>
-                            <div>
-                                <p class=""> Au piment d'Espelette <span> 25€</span></p>  
-                                 
-                            </div>
+                         </div>
+                         <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
                         </a>
-                        <a class="" href="">
-                            <div >
-                                <h3 class="">Foie gras de canard mi-cuit</h3>
+                        <a class="card composition" href="">
+                            <div class="composition__flex">
+                               <h3 class="composition__flex--title">Foie gras de canard mi-cuit</h3>
+                               <div class="composition__flex--content">
+                                   <p class="composition__flex--content--ingrédient"> Et ses copeaux de truffe noire
+                                   <div class="composition__flex--content--ingrédient--prix"> 35€</div>
+                                   </p>  
+                               </div>
                             </div>
-                            <div>
-                                <p class=""> Et ses copeaux de truffe noire <span> 35€</span></p>  
-                                 
+                            <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                           </a>
+                           <a class="card composition" href="">
+                            <div class="composition__flex">
+                               <h3 class="composition__flex--title">Œuf au plat</h3>
+                               <div class="composition__flex--content">
+                                   <p class="composition__flex--content--ingrédient"> Assaisonné à la truffe sur lit de caviar
+                                   <div class="composition__flex--content--ingrédient--prix"> 20€</div>
+                                   </p>  
+                               </div>
                             </div>
-                        </a>
-                        <a class="" href="">
-                            <div >
-                                <h3 class="">Œuf au plat</h3>
-                            </div>
-                            <div>
-                                <p class="">Assaisonné à la truffe sur lit de caviar <span> 20€</span> </p>  
-                               
-                            </div>
-                        </a>      
+                            <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                           </a>
+                    </div>
                 </article>
                
                 <article>
-                    <h2>Plats</h2>     
-                    <a class="" href="">
-                        <div >
-                            <h3 class="">Filet de bœuf aux herbes</h3>
+                    <h2> <span class="temps">Plats</span></h2> 
+                <div class="card__flex">    
+                    <a class="card composition" href="">
+                        <div class="composition__flex">
+                           <h3 class="composition__flex--title">Filet de bœuf aux herbes</h3>
+                           <div class="composition__flex--content">
+                               <p class="composition__flex--content--ingrédient"> Accompagné de sa ribambelle de légumes
+                               <div class="composition__flex--content--ingrédient--prix"> 40€</div>
+                               </p>  
+                           </div>
                         </div>
-                        <div>
-                            <p class=""> Accompagné de sa ribambelle de légumes <span> 40€</span></p>  
-                             
+                        <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                       </a>
+                       <a class="card composition" href="">
+                        <div class="composition__flex">
+                           <h3 class="composition__flex--title">Parmentier de queue de bœuf</h3>
+                           <div class="composition__flex--content">
+                               <p class="composition__flex--content--ingrédient"> À la truffe noire sur sa purée de panais
+                               <div class="composition__flex--content--ingrédient--prix"> 35€</div>
+                               </p>  
+                           </div>
                         </div>
-                    </a>
-                    <a class="" href="">
-                        <div >
-                            <h3 class="">Parmentier de queue de bœuf</h3>
+                        <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                       </a>
+                       <a class="card composition" href="">
+                        <div class="composition__flex">
+                           <h3 class="composition__flex--title">Filet de turbot</h3>
+                           <div class="composition__flex--content">
+                               <p class="composition__flex--content--ingrédient"> Aux agrumes
+                               <div class="composition__flex--content--ingrédient--prix"> 44€</div>
+                               </p>  
+                           </div>
                         </div>
-                        <div>
-                            <p class=""> À la truffe noire sur sa purée de panais <span> 35€</span></p>  
-                             
-                        </div>
-                    </a>
-                    <a class="" href="">
-                        <div >
-                            <h3 class=""> Filet de turbot</h3>
-                        </div>
-                        <div>
-                            <p class=""> Aux agrumes <span> 44€</span> </p>  
-                           
-                        </div>
-                    </a>      
+                        <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                       </a>
+                    </div>   
                 </article>
                 
                 <article>
-                    <h2>Desserts</h2>     
-                        <a class="" href="">
-                            <div >
-                                <h3 class="">Paris-Brest</h3>
-                            </div>
-                            <div>
-                                <p class=""> Revisité <span> 18€</span></p>  
-                                 
-                            </div>
-                        </a>
-                        <a class="" href="">
-                            <div >
-                                <h3 class="">Macaron au chocolat d'exception</h3>
-                            </div>
-                            <div>
-                                <p class="">Et glace à la vanille de Madagascar <span>22€</span></p>  
-                                 
-                            </div>
-                        </a>
-                        <a class="" href="">
-                            <div >
-                                <h3 class="">Mousse au chocolat </h3>
-                            </div>
-                            <div>
-                                <p class="">Au piment d'Espelette et à la truffe noire <span>23€</span> </p>  
-                               
-                            </div>
-                        </a>      
+                    <h2> <span class="temps">Desserts </span></h2>    
+                    <div class="card__flex"> 
+                    <a class="card composition" href="">
+                        <div class="composition__flex">
+                           <h3 class="composition__flex--title">Paris-Brest</h3>
+                           <div class="composition__flex--content">
+                               <p class="composition__flex--content--ingrédient"> Revisité
+                               <div class="composition__flex--content--ingrédient--prix"> 18€</div>
+                               </p>  
+                           </div>
+                        </div>
+                        <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                       </a>
+                       <a class="card composition" href="">
+                        <div class="composition__flex">
+                           <h3 class="composition__flex--title">Macaron au chocolat d'exception</h3>
+                           <div class="composition__flex--content">
+                               <p class="composition__flex--content--ingrédient"> Et glace à la vanille de Madagascar
+                               <div class="composition__flex--content--ingrédient--prix"> 22€</div>
+                               </p>  
+                           </div>
+                        </div>
+                        <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                       </a>
+                       <a class="card composition" href="">
+                        <div class="composition__flex">
+                           <h3 class="composition__flex--title">Mousse au chocolat</h3>
+                           <div class="composition__flex--content">
+                               <p class="composition__flex--content--ingrédient"> Au piment d'Espelette et à la truffe noire
+                               <div class="composition__flex--content--ingrédient--prix"> 23€</div>
+                               </p>  
+                           </div>
+                        </div>
+                        <div class="composition__block"><i class=" composition__block--black fa-solid fa-circle-check"></i></div>
+                       </aS>
+                    </div>
                 </article>
 
+                <div class="exploration">
+                    <a class="exploration__link" href=""> Commander </a>
+                    </div>
             </section>
             
+
         </main>
 
-        <footer>
-            <span>OhMyFood</span> 
-             <div>
-                 <span><i class="fa-solid fa-utensils"></i>proposer un restaurant</span>
-                 <span><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</span>
-                 <span>Mention légales</span>
-                 <span>Contact</span>
+        <footer class="footer position">
+            <span class="footer__title">OhMyFood</span> 
+             <div class="footer__content">
+                 <span class="footer__content--fin"><i class="fa-solid fa-utensils fa-margin-footer"></i>proposer un restaurant</span>
+                 <span class="footer__content--fin"><i class="fa-solid fa-handshake-angle fa-margin-footer"></i>Devenir partenaire</span>
+                 <span class="footer__content--fin">Mention légales</span>
+                 <span class="footer__content--fin">Contact</span>
              </div>
          </footer>
-
+</div>
 </body>

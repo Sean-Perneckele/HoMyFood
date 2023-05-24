@@ -1,0 +1,250 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-color: #9356dc;
+    --secondary-color: #ff79da;
+    ---third-color: #99e2d0;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 767px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: 'Shrikhand', cursive; 
+}
+
+.header__flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.fa-arrow-left {
+    display: flex;
+    align-items: center;
+    padding-top: 35px ;
+}
+
+header {
+    display: flex;
+    
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+
+}
+
+.position {
+    position: relative;
+    bottom: 60px;
+}
+
+.fa-solid {
+    display: flex;
+    align-items: center;
+}
+.fa-heart {
+    display: flex;
+    display: inline-block;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/***** menu *****/
+
+h2 {
+    padding-left: 20px;
+}
+
+.temps{
+    
+
+    border-bottom: #99e2d0 solid 2px;
+    
+    border-spacing: 20px;
+   
+}
+
+.menu {
+    background-color: #f6f6f6;
+    border-radius: 60px  60px 0px 0px;
+
+    &__flex {
+
+        display: flex;
+        justify-content: space-around;
+        padding: 30px 10px;
+        &--title {
+            font-family: 'Shrikhand', cursive;
+            font-size: 28px; 
+        }
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    display: block;
+}
+
+
+.composition {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    min-width: 150px;
+    margin-bottom: 15px;
+
+        &__flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        
+        &--title {
+            font-weight: 700;
+            font-size: 18px;
+            padding: 0px 10px;
+            padding-top: 10px ;
+            margin: 0px;                  
+                    }
+
+        &--content {
+            display: flex;
+            align-items: center;
+            padding: 0px 10px;
+            padding-bottom: 10px;
+            margin: 0px;
+                        
+        
+                &--ingrédient {
+                    width: 100%;
+                    margin: 0px;
+                    font-weight: 300;
+                    font-size: 15px;
+        
+                        &--prix{
+                            font-weight: 700;
+                            font-size: 15px;
+                            }
+            }
+            
+        }
+    }
+
+        &__block{
+            
+            display: flex;
+            justify-content: center;
+            
+        &--black {
+            
+            display: flex;
+            display: inline-block;
+            justify-content: center;
+          
+            background-color: #99e2d0;
+            border-radius: 0px 10px 10px 0px;
+            padding: 10px;
+            
+            color: #ffffff;
+            font-size: 20px;
+            }   
+    }
+   }
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card__flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exploration{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+  
+    text-align: center;
+    padding-bottom: 30px;
+
+
+    .exploration__link{
+        
+        padding: 15px 40px;
+   
+    
+        font-weight: 700;
+        font-size: 16px;
+
+        border-radius: 39px;
+
+        box-sizing: border-box;
+        text-decoration: none;
+
+        box-shadow: 1px 5px 10px grey;
+
+        transition-duration: 1s;            
+
+        &:hover {
+            opacity: 0.8 ;
+            box-shadow: none;
+        }
+        background: linear-gradient(to top, var(--main-color), var(--secondary-color));
+    color: white;
+    }
+
+}
+
+main {
+    margin: 0px;
+}
+
+/******** footer *******/
+
+.footer {
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #353535;
+    padding-bottom: 20px;
+
+        &__title {
+            padding: 20px 15px ;
+            font-size: 18px;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column ;
+
+            &--fin {
+                padding: 5px 15px ;
+                font-size: 16px;
+            }
+        }
+    .fa-margin-footer {
+        padding-right: 10px;
+    }
+
+}
