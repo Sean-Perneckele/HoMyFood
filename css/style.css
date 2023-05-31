@@ -78,19 +78,36 @@ header {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-.fonctionnement__title {
+.fonctionnement div {
   padding: 15px 0px;
   font-weight: 700;
   font-size: 24px;
 }
-.fonctionnement__choix {
-  padding: 25px 20px;
+.fonctionnement a {
+  display: flex;
+  align-items: center;
+  padding: 25px 0px;
   margin: 10px 0px;
   font-size: 16px;
   font-weight: 700;
   box-shadow: 1px 5px 10px grey;
   border-radius: 20px;
   background-color: #F6F6F6;
+}
+.fonctionnement a span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  background-color: #9356dc;
+  color: white;
+  font-size: 15px;
+  position: relative;
+  right: 10px;
+  padding: 0px;
 }
 
 .fa-grey {
@@ -138,7 +155,7 @@ header {
   height: 400px;
   margin-bottom: 25px;
 }
-.restaurant__img {
+.restaurant img {
   width: 100%;
   height: 300px;
   border-radius: 20px 20px 0px 0px;
@@ -149,18 +166,18 @@ header {
   justify-content: space-between;
   color: black;
 }
-.restaurant__content--flex {
+.restaurant__content div {
   display: flex;
   flex-direction: column;
   padding-left: 30px;
 }
-.restaurant__content--flex--title {
+.restaurant__content div h3 {
   font-weight: 700;
   font-size: 18px;
   margin: 0px;
   margin-top: 10px;
 }
-.restaurant__content--flex--content {
+.restaurant__content div p {
   margin: 0px;
   margin-top: 10px;
   font-weight: 300;
@@ -171,6 +188,7 @@ header {
   flex-wrap: wrap;
   align-content: center;
   width: 50px;
+  background-color: linear-gradient(to top, var(--main-color), var(--secondary-color));
 }
 
 a {
@@ -180,34 +198,33 @@ a {
 .fa-heart {
   font-size: 30px;
   color: #99e2d0;
-  content: var(---third-color);
 }
 
 .temporaire {
-  color: linear-gradient(to top, var(--main-color), var(--secondary-color));
+  display: flex;
 }
 
 /******** footer *******/
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   color: white;
   background: #353535;
   padding-bottom: 20px;
 }
-.footer__title {
+footer span {
   padding: 20px 15px;
   font-size: 18px;
 }
-.footer__content {
+footer div {
   display: flex;
   flex-direction: column;
 }
-.footer__content--fin {
+footer div span {
   padding: 5px 15px;
   font-size: 16px;
 }
-.footer .fa-margin-footer {
+footer .fa-margin-footer {
   padding-right: 10px;
 }
 
