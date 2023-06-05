@@ -227,12 +227,42 @@ header {
             flex-wrap: wrap;
             align-content: center;
             width: 50px;
-            
-            background-color:linear-gradient(to top, var(--main-color), var(--secondary-color));
-            
+             
+      
+           
+               svg {
+                width:22px ; 
+                height:21px; 
+                fill:none;
+                background: linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%);
+                overflow: hidden;
+             
+               
+               
+                transition: all 1000ms linear;
+                stroke:#101010;
+
+              
+                   
+
+                    &:hover {
+                        fill:url(#paint0_linear_1_250);
+                        transform-origin: bottom;
+                        transition-duration: 1000ms;
+                    }
+
+               }
+               svg::before{
+                content: "";
+                background-color: #ffba10;
+                color: #99e2d0;
+                }
            }
         }
 }
+
+
+
  a {
     text-decoration: none;
  }

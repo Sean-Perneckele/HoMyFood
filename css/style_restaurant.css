@@ -22,7 +22,7 @@
 
 .main-container {
   width: 100%;
-  max-width: 767px;
+  max-width: 769px;
   padding: 0 50px;
   box-sizing: border-box;
 }
@@ -39,12 +39,6 @@ header div {
 }
 header div h1 {
   font-family: "Shrikhand", cursive;
-}
-
-.fa-arrow-left {
-  display: flex;
-  align-items: center;
-  padding-top: 35px;
 }
 
 /***** img ****/
@@ -97,16 +91,12 @@ section {
 
 .composition {
   display: flex;
-  flex-direction: row;
   width: 95%;
   min-width: 150px;
   margin-bottom: 15px;
-  transition-duration: 1s;
 }
 .composition__flex {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
 }
 .composition__flex h3 {
@@ -115,6 +105,9 @@ section {
   padding: 0px 10px;
   padding-top: 10px;
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .composition__flex--content {
   display: flex;
@@ -128,19 +121,24 @@ section {
   margin: 0px;
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .composition__flex--content p div {
   font-weight: 700;
   font-size: 15px;
 }
+.composition:hover .composition__block {
+  transform: scaleX(1) scaleY(1) !important;
+}
 .composition__block {
   display: flex;
-  justify-content: center;
+  transition-duration: 1000ms;
+  transform-origin: right;
+  transform: scaleX(0) scaleY(1);
 }
 .composition__block--content {
-  display: flex;
-  display: inline-block;
-  justify-content: center;
   background-color: #99e2d0;
   border-radius: 0px 10px 10px 0px;
   padding: 10px;
@@ -168,7 +166,8 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
+  padding-top: 30px;
 }
 .exploration a {
   padding: 15px 40px;

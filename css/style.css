@@ -188,7 +188,25 @@ header {
   flex-wrap: wrap;
   align-content: center;
   width: 50px;
-  background-color: linear-gradient(to top, var(--main-color), var(--secondary-color));
+}
+.restaurant__content--heart svg {
+  width: 22px;
+  height: 21px;
+  fill: none;
+  background: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  overflow: hidden;
+  transition: all 1000ms linear;
+  stroke: #101010;
+}
+.restaurant__content--heart svg:hover {
+  fill: url(#paint0_linear_1_250);
+  transform-origin: bottom;
+  transition-duration: 1000ms;
+}
+.restaurant__content--heart svg::before {
+  content: "";
+  background-color: #ffba10;
+  color: #99e2d0;
 }
 
 a {
