@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -31,9 +32,11 @@
 header {
   display: flex;
 }
+header a {
+  display: flex;
+}
 header div {
   display: flex;
-  flex-direction: row;
   width: 100%;
   justify-content: center;
 }
@@ -209,10 +212,93 @@ footer div {
 footer div span {
   padding: 5px 15px;
   font-size: 16px;
+  display: flex;
 }
 footer .fa-margin-footer {
   padding-right: 10px;
-  display: inline;
+}
+
+@media all and (min-width: 769px) and (max-width: 1440px) {
+  .main-container {
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+  section .secondary-container {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    max-width: 80%;
+    background-color: #f6f6f6;
+  }
+  section .secondary-container article {
+    justify-content: center;
+  }
+  section .secondary-container article h2 {
+    margin-left: 13%;
+  }
+  section .secondary-container article a {
+    width: 70%;
+  }
+  .menu {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+  .menu span {
+    margin-right: 20px;
+  }
+  img {
+    height: 350px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer span {
+    padding-top: 50px;
+    padding-bottom: 5px;
+  }
+  footer div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: baseline;
+  }
+}
+.Entré {
+  animation: apparition 1.2s 1s;
+  transform: scaleY(0) scaleX(1);
+  transform-origin: top;
+  animation-fill-mode: forwards;
+}
+
+.Plats {
+  animation: apparition 1.2s 2s;
+  transform: scaleY(0) scaleX(1);
+  transform-origin: top;
+  animation-fill-mode: forwards;
+}
+
+.Desserts {
+  animation: apparition 1s 3s;
+  transform: scaleY(0) scaleX(1);
+  transform-origin: top;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apparition {
+  0% {
+    transform: scaleY(0) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
 }
 
 /*# sourceMappingURL=style_restaurant.css.map */

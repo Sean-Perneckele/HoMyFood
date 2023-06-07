@@ -14,25 +14,18 @@
 </head>
 
 <body>
+<div class="chargement">
+    <span class="chargement__texte"> Chargement</span>
+    <span class="chargement__border"></span>
+    <span class="chargement__objet"></span>
+</div>
 
-
-
-    <div class="main-container">
+<div class="main-container">
         <header>
             <h1 class="title">
                 OhMyFood
             </h1>
         </header>
-
-        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.7206 2.40551L12.7203 2.40576L11.8739 3.35732L11.5003 3.77727L11.1267 3.35732L10.2802 2.40576L10.2797 2.40514C8.28247 0.152585 5.09737 -0.169649 2.9764 1.80201C0.482212 4.1245 0.344816 8.32357 2.58455 10.8495L10.8987 20.2148C10.8987 20.2149 10.8988 20.2149 10.8988 20.2149C11.237 20.5955 11.7593 20.5955 12.0975 20.2149C12.0975 20.2149 12.0975 20.2149 12.0976 20.2148L20.4119 10.8493L20.412 10.8492C22.6556 8.32335 22.5183 4.12461 20.0243 1.80213L12.7206 2.40551ZM12.7206 2.40551C14.7223 0.15233 17.9032 -0.169452 20.024 1.80187L12.7206 2.40551Z" stroke="#101010"/>
-            </svg>
-
-            <svg width="23" height="23" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" stroke="#101010" />
-               
-                </svg>
-                
             
         <main>
 
@@ -46,10 +39,12 @@
             </section>
 
             <section class="fonctionnement">
-                <div >Fonctionnement </div>
+                <div class="fonctionnement__titre" >Fonctionnement </div>
+                <div>
                 <a> <span>1</span><i class="fa-solid fa-mobile-screen-button fa-margin fa-grey"></i>Choisissez un restaurant</a>
                 <a><span >2</span><i class="fa-solid fa-list-ul fa-margin fa-grey"></i>Composez votre menu</a>
                 <a> <span>3</span><i class="fa-solid fa-store fa-margin"></i>Dégustez au restaurant</a>
+                </div>
             </section>
 
             <section class="liste">
@@ -66,20 +61,17 @@
                                 <p >Ménilmontant</p>
                             </div>
                             <span class="restaurant__content--heart"><svg  viewBox="0 0 22 21"  xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z"/></svg>
+                                <path d="M19.865 1.43593C17.5103 -0.753131 14.0083 -0.359381 11.847 2.07343L11.0005 3.02499L10.154 2.07343C7.99701 -0.359381 4.49076 -0.753131 2.13607 1.43593C-0.562363 3.94843 -0.704161 8.45781 1.71068 11.1812L10.0251 20.5469C10.5622 21.1516 11.4345 21.1516 11.9716 20.5469L20.2861 11.1812C22.7052 8.45781 22.5634 3.94843 19.865 1.43593Z"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_250" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#9356DC"/>
+                                    <stop offset="1" stop-color="#FF79DA"/>
+                                    </linearGradient>
+                                    </defs>
+                            </svg>
                             </span>
                         </span>
                     </a>
-                    <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" fill="url(#paint0_linear_1_250)"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_1_250" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#9356DC"/>
-                        <stop offset="1" stop-color="#FF79DA"/>
-                        </linearGradient>
-                        </defs>
-                        </svg>
-                        
                     
                     <a class="restaurant card" href="">
                         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
@@ -134,5 +126,5 @@
                 <span >Contact</span>
             </div>
         </footer>
-        <div class="main-container">
+</div>
 </body>

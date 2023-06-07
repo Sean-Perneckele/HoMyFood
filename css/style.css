@@ -78,12 +78,12 @@ header {
   margin-top: 30px;
   margin-bottom: 50px;
 }
-.fonctionnement div {
+.fonctionnement__titre {
   padding: 15px 0px;
   font-weight: 700;
   font-size: 24px;
 }
-.fonctionnement a {
+.fonctionnement div a {
   display: flex;
   align-items: center;
   padding: 25px 0px;
@@ -94,7 +94,7 @@ header {
   border-radius: 20px;
   background-color: #F6F6F6;
 }
-.fonctionnement a span {
+.fonctionnement div a span {
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -244,6 +244,127 @@ footer div span {
 }
 footer .fa-margin-footer {
   padding-right: 10px;
+}
+
+@media all and (min-width: 769px) and (max-width: 1440px) {
+  .main-container {
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+  .fonctionnement div {
+    display: flex;
+  }
+  .fonctionnement div a {
+    width: 30%;
+    margin-right: 30px;
+  }
+  .card__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .restaurant {
+    width: 40%;
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 250px;
+  }
+  .restaurant img {
+    height: 150px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  footer span {
+    padding-top: 50px;
+    padding-bottom: 5px;
+  }
+  footer div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: baseline;
+  }
+}
+.main-container {
+  animation: apparition 0s 3s;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/******* chargmeent ******/
+.chargement {
+  animation: apparition2 0s 3s;
+  transform: scale(1);
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.chargement__texte {
+  position: absolute;
+  z-index: 1;
+  color: white;
+}
+.chargement__border {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 10px solid white;
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--main-color);
+  animation: spin2 2000ms infinite;
+  position: absolute;
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.chargement__objet {
+  color: white;
+  background: linear-gradient(to top, var(--main-color), var(--secondary-color));
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2000ms infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes apparition2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    height: 0vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
