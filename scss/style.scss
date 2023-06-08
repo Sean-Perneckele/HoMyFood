@@ -103,7 +103,6 @@ header {
         padding: 15px 0px;
         font-weight: 700;
         font-size: 24px;
-
     }
 
     div {
@@ -233,31 +232,28 @@ header {
       
            
                svg {
-                width:22px ; 
+                width:23px ; 
                 height:21px; 
                 fill:none;
-                background: linear-gradient(0deg,rgba(255,121,218,1)  0%, rgba(147,86,220,1) 100%);
-                overflow: hidden;
-             
-               
-               
-                transition: all 1000ms linear;
                 stroke:#101010;
 
-              
-                   
-
-                    &:hover {
-                        fill:url(#paint0_linear_1_250);
-                        transform-origin: bottom;
-                        transition-duration: 1000ms;
-                    }
-
                }
-               svg::before{
-                content: "";
-                background-color: #ffba10;
-                color: #99e2d0;
+               
+               &:hover {
+                .coeur {
+                    transform: scale(1);
+                }
+                
+               }
+
+                .coeur {
+                    position: absolute;
+                    bottom: 55px;
+                    fill:url(#paint0_linear_1_250);
+                    transform: scale(0);
+                    transform-origin: bottom;
+                    transition: 1s;
+                    
                 }
            }
         }
