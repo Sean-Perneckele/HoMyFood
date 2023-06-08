@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/***  Racine du site (l'animation de chargement est après la construction du site) ****/
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -15,6 +17,7 @@
   box-sizing: border-box;
 }
 
+/*** Header  ****/
 .title {
   font-family: "Shrikhand", cursive;
 }
@@ -31,6 +34,8 @@ header {
   align-items: center;
   background-color: #F6F6F6;
   text-align: center;
+  /*** les trois première information de la section 1 ****/
+  /*** le bouton de la section 1 ****/
 }
 .exploration__location {
   background-color: #EAEAEA;
@@ -123,6 +128,7 @@ header {
 }
 
 /******** section 3 restaurant ******/
+/*** titre de la section 3 ****/
 .liste {
   background: #F6F6F6;
   display: flex;
@@ -137,6 +143,7 @@ header {
   font-size: 24px;
 }
 
+/*** disposition et squelette des cards  ****/
 .card__flex {
   display: flex;
   align-items: center;
@@ -149,6 +156,7 @@ header {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+/*** construction de la card  ****/
 .restaurant {
   width: 90%;
   min-width: 200px;
@@ -165,6 +173,7 @@ header {
   display: flex;
   justify-content: space-between;
   color: black;
+  /***  l'animation du coeur   ***/
 }
 .restaurant__content div {
   display: flex;
@@ -186,8 +195,8 @@ header {
 .restaurant__content--heart {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  width: 50px;
+  align-items: center;
+  margin-right: 50px;
 }
 .restaurant__content--heart svg {
   width: 23px;
@@ -200,7 +209,6 @@ header {
 }
 .restaurant__content--heart .coeur {
   position: absolute;
-  bottom: 55px;
   fill: url(#paint0_linear_1_250);
   transform: scale(0);
   transform-origin: bottom;
@@ -209,15 +217,6 @@ header {
 
 a {
   text-decoration: none;
-}
-
-.fa-heart {
-  font-size: 30px;
-  color: #99e2d0;
-}
-
-.temporaire {
-  display: flex;
 }
 
 /******** footer *******/
@@ -244,12 +243,15 @@ footer .fa-margin-footer {
   padding-right: 10px;
 }
 
+/***  disposition ordinateur  ***/
 @media all and (min-width: 769px) and (max-width: 1440px) {
+  /*** racine du site  ***/
   .main-container {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
   }
+  /*** section 2 fonctionnement ***/
   .fonctionnement div {
     display: flex;
   }
@@ -257,12 +259,14 @@ footer .fa-margin-footer {
     width: 30%;
     margin-right: 30px;
   }
+  /*** disposition des cards  ****/
   .card__flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
   }
+  /*** construction de la card  ****/
   .restaurant {
     width: 40%;
     margin-right: 30px;
@@ -272,6 +276,7 @@ footer .fa-margin-footer {
   .restaurant img {
     height: 150px;
   }
+  /***   Footer ***/
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -287,23 +292,16 @@ footer .fa-margin-footer {
     align-items: baseline;
   }
 }
+/***  l'animation permettant l'aparition du site  ***/
 .main-container {
-  animation: apparition 0s 3s;
-  transform: scale(0);
-  animation-fill-mode: forwards;
+  z-index: 0;
 }
 
-@keyframes apparition {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-/******* chargmeent ******/
+/******* chargement ******/
 .chargement {
-  animation: apparition2 0s 3s;
+  z-index: 1;
+  position: absolute;
+  animation: chargement 0s 3s;
   transform: scale(1);
   animation-fill-mode: forwards;
   display: flex;
@@ -311,6 +309,20 @@ footer .fa-margin-footer {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  background: white;
+  /**** texte "chargmeent" ****/
+  /**** cercle extèrieur chargment  ***/
+  /****   cercle intèrieur Chargement ****/
+}
+@keyframes chargement {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    height: 0vh;
+  }
 }
 .chargement__texte {
   position: absolute;
@@ -324,10 +336,10 @@ footer .fa-margin-footer {
   border: 10px solid white;
   border-top-color: var(--secondary-color);
   border-bottom-color: var(--main-color);
-  animation: spin2 2000ms infinite;
+  animation: rotation__reverse 2000ms infinite;
   position: absolute;
 }
-@keyframes spin2 {
+@keyframes rotation__reverse {
   0% {
     transform: rotate(0deg);
   }
@@ -345,23 +357,14 @@ footer .fa-margin-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: spin 2000ms infinite;
+  animation: rotation 2000ms infinite;
 }
-@keyframes spin {
+@keyframes rotation {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes apparition2 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-    height: 0vh;
   }
 }
 

@@ -1,3 +1,5 @@
+/***  Racine du site (l'animation de chargement est après la construction du site) ****/
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -15,7 +17,7 @@
     box-sizing: border-box;
 }
 
-
+/*** Header  ****/
 
 .title {
     font-family: 'Shrikhand', cursive; 
@@ -26,7 +28,6 @@ header {
     justify-content: center;
 }
 
-
 /***** section 1 exploration ****/
 
 .exploration {
@@ -35,6 +36,8 @@ header {
     align-items: center;   
     background-color: #F6F6F6;
     text-align: center;
+
+    /*** les trois première information de la section 1 ****/
     
         &__location{
             background-color: #EAEAEA;
@@ -59,9 +62,10 @@ header {
         &__content{
             padding: 15px ;
             font-size: 18px;
-            font-weight: 300;
-           
+            font-weight: 300;          
         }
+
+        /*** le bouton de la section 1 ****/
 
         &__link{
             margin: 20px 0px;
@@ -85,7 +89,6 @@ header {
                     box-shadow: none;
                 }
 
-
     background: linear-gradient(to top, var(--main-color), var(--secondary-color));
             color: white;
         }
@@ -106,34 +109,34 @@ header {
     }
 
     div {
-    a{
-        display: flex;
-        align-items: center;
-        padding: 25px 0px;
-        
-        margin: 10px 0px;
-        font-size: 16px;
-        font-weight: 700;
+            a{
+                display: flex;
+                align-items: center;
+                padding: 25px 0px;
+                
+                margin: 10px 0px;
+                font-size: 16px;
+                font-weight: 700;
 
-        box-shadow: 1px 5px 10px grey;
-        border-radius: 20px;
-    background-color: #F6F6F6;
+                box-shadow: 1px 5px 10px grey;
+                border-radius: 20px;
+                background-color: #F6F6F6;
 
-        span {  
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-            background-color: #9356dc;
-            color: white;
-            font-size: 15px;
-            position: relative;
-            right: 10px;
-            padding: 0px;
-           }
+                    span {  
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        background-color: #9356dc;
+                        color: white;
+                        font-size: 15px;
+                        position: relative;
+                        right: 10px;
+                        padding: 0px;
+                    }
     }
 }
 }
@@ -149,9 +152,9 @@ header {
     color: var(--main-color) ;
 }
 
-
 /******** section 3 restaurant ******/
 
+/*** titre de la section 3 ****/
 .liste {
     background: #F6F6F6;
     display: flex;
@@ -164,11 +167,10 @@ header {
             padding-left: 30px;
             font-weight: 700;
             font-size: 24px;
-        }
-    
-   
+        }   
 }
 
+/*** disposition et squelette des cards  ****/
 
 .card__flex {
     display: flex;
@@ -181,6 +183,8 @@ header {
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
+
+/*** construction de la card  ****/
 .restaurant{
 
     width: 90%;
@@ -188,8 +192,6 @@ header {
     height: 400px;
     margin-bottom: 25px;
    
-   
-
         img{
             width: 100%;
             height: 300px;
@@ -207,7 +209,6 @@ header {
                 flex-direction: column;
                 padding-left: 30px ;
                 
-
               h3 {
                 font-weight: 700;
                 font-size: 18px;
@@ -221,34 +222,29 @@ header {
                 font-weight: 300;
                 font-size: 17px;
                  }
-
            }
+           /***  l'animation du coeur   ***/
+
            &--heart {
             display: flex;
             flex-wrap: wrap;
-            align-content: center;
-            width: 50px;
-             
-      
+            align-items: center;
+            margin-right: 50px;
            
                svg {
                 width:23px ; 
                 height:21px; 
                 fill:none;
                 stroke:#101010;
-
                }
-               
+            
                &:hover {
                 .coeur {
                     transform: scale(1);
-                }
-                
+                }  
                }
-
                 .coeur {
                     position: absolute;
-                    bottom: 55px;
                     fill:url(#paint0_linear_1_250);
                     transform: scale(0);
                     transform-origin: bottom;
@@ -259,24 +255,9 @@ header {
         }
 }
 
-
-
  a {
     text-decoration: none;
- }
-
- .fa-heart {
-    font-size: 30px;
-    color: #99e2d0;
-   
- }
-
- 
- .temporaire {    
-    
-    display: flex;
-
- }
+ } 
 
 /******** footer *******/
 
@@ -304,17 +285,21 @@ footer {
     .fa-margin-footer {
         padding-right: 10px;
     }
-
 }
+
+/***  disposition ordinateur  ***/
 
 @media all and (min-width:769px)  and (max-width:1440px) {
 
-    .main-container {
-        
+    /*** racine du site  ***/
+
+    .main-container {       
         max-width: 1440px;
         padding: 0 50px;
         box-sizing: border-box;
     }
+
+/*** section 2 fonctionnement ***/
 
     .fonctionnement {
 
@@ -328,12 +313,16 @@ footer {
         }
     }
 
+   /*** disposition des cards  ****/
+
 .card__flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
 }
+
+/*** construction de la card  ****/
 
 .restaurant {
 
@@ -345,9 +334,9 @@ footer {
     img{
         height: 150px;
     }
-
-
 }
+
+/***   Footer ***/
 
 footer{
     display: flex;
@@ -365,39 +354,27 @@ footer{
     align-items: baseline;
     }
 }
-
 }
 
-
-
-@mixin teste {
-    transform: scale(0);
-    animation-fill-mode: forwards;
-}
+/***  l'animation permettant l'aparition du site  ***/
 
   .main-container {
-    animation: apparition 0s 3s;
-    @include teste;
+  
+    z-index: 0;
 
   }
 
-  @keyframes apparition {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform:scale(1);
-    }
-  }
-
-
-
-
-/******* chargmeent ******/
+ 
+ 
+/******* chargement ******/
 
 .chargement{
 
-    animation: apparition2 0s 3s;
+    z-index: 1;
+
+    position: absolute;
+
+    animation: chargement 0s 3s;
     transform:scale(1);
     animation-fill-mode: forwards;
     
@@ -407,16 +384,29 @@ footer{
     align-items: center;
 
     height: 100vh;
+    width: 100%;
+    background: white;
 
+    @keyframes chargement {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform:scale(0);
+            height: 0vh;
+        }
+      }
+
+    /**** texte "chargmeent" ****/
     &__texte{
         position: absolute;
         z-index: 1;
         color: white;
     }
 
+    /**** cercle extèrieur chargment  ***/
     &__border {
-
-        
+  
         width: 150px;
         height: 150px;
         border-radius: 100% ;
@@ -424,13 +414,12 @@ footer{
         border: 10px solid white;
         border-top-color:var(--secondary-color);
         border-bottom-color: var(--main-color);
-        animation: spin2 2000ms  infinite;
+        animation: rotation__reverse 2000ms  infinite;
 
-        position:absolute;
-        
-        
+        position:absolute; 
     }
-    @keyframes spin2{
+
+    @keyframes rotation__reverse{
         0%{
         
           transform: rotate(0deg);
@@ -440,6 +429,9 @@ footer{
           transform: rotate(-360deg);
         }
       }
+
+      /****   cercle intèrieur Chargement ****/
+
     &__objet{
         
         color:white;
@@ -455,12 +447,12 @@ footer{
         align-items: center;
     
        
-        animation: spin 2000ms  infinite;
-        
+        animation: rotation 2000ms  infinite;
     }
-    @keyframes spin{
-        0%{
-        
+
+    @keyframes rotation {
+
+        0%{  
           transform: rotate(0deg);
         }
       
@@ -468,15 +460,4 @@ footer{
           transform: rotate(360deg);
         }
       }
-      
-
-  @keyframes apparition2 {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform:scale(0);
-        height: 0vh;
-    }
-  }
 }

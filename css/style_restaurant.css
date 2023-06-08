@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*** racine du site  ***/
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -79,6 +80,7 @@ section {
 .menu {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .menu span {
   font-family: "Shrikhand", cursive;
@@ -97,6 +99,7 @@ section {
   width: 95%;
   min-width: 150px;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .composition__flex {
   flex-direction: column;
@@ -247,7 +250,6 @@ footer .fa-margin-footer {
   }
   .menu {
     display: flex;
-    align-items: baseline;
     justify-content: center;
   }
   .menu span {
