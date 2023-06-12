@@ -31,39 +31,43 @@
             
         <main>
 
-            <!--  METRE L'ANCRE PUTANT -->
 <!--  première section avec les première information et un bouton amenant au lien restaurant via une ancre ancre -->
-            <section class="exploration">
+            <div class="exploration">
 
-                <span class="exploration__location"> <i class=" fa-solid fa-location-dot "></i> </i>Paris, Belleville</span>
+                <span class="exploration__location"> <i class=" fa-solid fa-location-dot "></i> Paris, Belleville</span>
                 <span class="exploration__title"> Réservez le menu qui vous convient</span>
                 <span class="exploration__content"> Découvrez des restaurant d'exception, sélectionnés par nos soins.</span>
                 
-                <a class="exploration__link" href=""> Explorer nos restaurant </a>
-            </section>
+                <a class="exploration__link" href="#restaurant"> Explorer nos restaurant </a>
+            </div>
 
             <!--  seconde secction présentnat le fonctionement du site   -->
 
-            <section class="fonctionnement">
+            <div class="fonctionnement">
                 <div class="fonctionnement__titre" >Fonctionnement </div>
                 <div>
                 <a> <span>1</span><i class="fa-solid fa-mobile-screen-button fa-margin fa-grey"></i>Choisissez un restaurant</a>
                 <a><span >2</span><i class="fa-solid fa-list-ul fa-margin fa-grey"></i>Composez votre menu</a>
                 <a> <span>3</span><i class="fa-solid fa-store fa-margin"></i>Dégustez au restaurant</a>
                 </div>
-            </section>
+            </div>
 
             <!--  troisième section avec les lien qui mènent au autre restaurant  -->
-            <section class="liste">
+            <section class="liste" id="restaurant">
 
                 <div class="liste__restaurant"> Restaurant</div>
 
                 <div class="card__flex">
 
                     <!-- une card qui est un lien  -->
-                    <a class="restaurant card" href="restaurant/La palette de gout.html">
-                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="images d'un plat">
-                        <span class="restaurant__content">
+                    <a class="restaurant card" href="restaurant/La_palette_de_gout.html">
+                        <div class="image">
+                        <img  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="images d'un plat">
+                        <div class="image__content">
+                            <span>Nouveau</span>
+                        </div>
+                        </div>
+                        <div class="restaurant__content">
                             <div>
                                 <h3 >La palette du gout</h3>
                                 <p >Ménilmontant</p>
@@ -78,18 +82,23 @@
                                <!-- l'élément permettant le dégrader de couleur qui n'aparait qu'içi mais qui est utilise pour les autre dégrader  -->
                                 <defs>
                                     <linearGradient id="paint0_linear_1_250" x1="11.5" y1="-5.45973" x2="3.93419" y2="27.9927" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#9356DC"/>
+                                    <stop offset="0" stop-color="#9356DC" /> 
                                     <stop offset="1" stop-color="#FF79DA"/>
                                     </linearGradient>
                                     </defs>
                             </svg>
                             </span>
-                        </span>
+                        </div>
                     </a>
                    
-                    <a class="restaurant card" href="restaurant/La note enchantée.html">
+                    <a class="restaurant card" href="restaurant/La_note_enchantée.html">
+                        <div class="image">
                         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                        <span class="restaurant__content">
+                        <div class="image__content">
+                            <span>Nouveau</span>
+                        </div>
+                        </div>
+                        <div class="restaurant__content">
                             <div >
                                 <h3 >La note enchantée</h3>
                                 <p >Charonne</p>
@@ -101,12 +110,12 @@
                                 <svg  xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" /></svg>
                             </span>
-                        </span>
+                        </div>
                     </a>
 
-                    <a class="restaurant card" href="restaurant/À la française.html">
+                    <a class="restaurant card" href="restaurant/À_la_française.html">
                         <img  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                        <span class="restaurant__content">
+                        <div class="restaurant__content">
                             <div >
                                 <h3 >A la française</h3>
                                 <p >Cité Rouge</p>
@@ -118,12 +127,12 @@
                                 <svg  xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" /></svg>
                             </span>
-                        </span>
+                        </div>
                     </a>
 
-                    <a class="restaurant card" href="restaurant/Le délice des sens.html">
+                    <a class="restaurant card" href="restaurant/Le_délice_des_sens.html">
                         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                        <span class="restaurant__content">
+                        <div class="restaurant__content">
                             <div >
                                 <h3 >Le délice des sens</h3>
                                 <p >Folie-Méricourt</p>
@@ -135,7 +144,7 @@
                                 <svg  xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20.3647 1.4363C18.01 -0.752765 14.5081 -0.359015 12.3468 2.0738L11.5003 3.02536L10.6538 2.0738C8.49677 -0.359015 4.99052 -0.752765 2.63583 1.4363C-0.0626076 3.9488 -0.204405 8.45817 2.21044 11.1816L10.5249 20.5472C11.062 21.1519 11.9343 21.1519 12.4714 20.5472L20.7858 11.1816C23.205 8.45817 23.0632 3.9488 20.3647 1.4363Z" /></svg>
                             </span>
-                        </span>
+                        </div>
                     </a>
 
                 </div>
@@ -144,7 +153,7 @@
         </main>
         <!--  mise en place du footer -->
         <footer>
-            <span >OhMyFood</span>
+            <span class="title">OhMyFood</span>
             <div >
                 <span ><i class="fa-solid fa-utensils fa-margin-footer"></i>proposer un restaurant</span>
                 <span ><i class="fa-solid fa-handshake-angle fa-margin-footer"></i>Devenir partenaire</span>

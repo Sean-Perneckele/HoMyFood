@@ -7,7 +7,7 @@
 :root {
   --main-color: #9356dc;
   --secondary-color: #ff79da;
-  ---third-color: #99e2d0;
+  --third-color: #99e2d0;
 }
 
 .main-container {
@@ -64,8 +64,6 @@ header {
   font-weight: 700;
   font-size: 16px;
   border-radius: 39px;
-  box-sizing: border-box;
-  text-decoration: none;
   box-shadow: 1px 5px 10px grey;
   transition-duration: 1s;
   background: linear-gradient(to top, var(--main-color), var(--secondary-color));
@@ -106,13 +104,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   background-color: #9356dc;
   color: white;
-  font-size: 15px;
   position: relative;
   right: 10px;
-  padding: 0px;
 }
 
 .fa-grey {
@@ -136,7 +131,7 @@ header {
   padding-bottom: 70px;
 }
 .liste__restaurant {
-  padding-top: 60px;
+  padding-top: 55px;
   padding-bottom: 40px;
   padding-left: 30px;
   font-weight: 700;
@@ -157,10 +152,25 @@ header {
 }
 
 /*** construction de la card  ****/
+.image {
+  position: relative;
+}
+.image__content {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  padding: 5px;
+  background-color: var(--third-color);
+  color: #008766;
+}
+.image__content span {
+  font-size: 15px;
+}
+
 .restaurant {
   width: 90%;
   min-width: 200px;
-  height: 400px;
+  height: 380px;
   margin-bottom: 25px;
 }
 .restaurant img {
@@ -271,7 +281,7 @@ footer .fa-margin-footer {
     width: 40%;
     margin-right: 30px;
     margin-left: 30px;
-    height: 250px;
+    height: 230px;
   }
   .restaurant img {
     height: 150px;

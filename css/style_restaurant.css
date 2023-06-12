@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*** racine du site  ***/
+/*** racine du site  (l'aniamtion de article se trouve a la fin)  ***/
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -7,11 +7,18 @@
 :root {
   --main-color: #9356dc;
   --secondary-color: #ff79da;
-  ---third-color: #99e2d0;
+  --third-color: #99e2d0;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 769px;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 .fa-solid {
-  display: flex;
+  --fa-display: flex;
   align-items: center;
 }
 
@@ -22,14 +29,16 @@
   align-content: center;
 }
 
-.main-container {
-  width: 100%;
-  max-width: 769px;
-  padding: 0 50px;
-  box-sizing: border-box;
+.title {
+  font-family: "Shrikhand", cursive;
 }
 
-/****** header *****/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/****** Header *****/
 header {
   display: flex;
 }
@@ -53,12 +62,8 @@ header div h1 {
 }
 
 /***** menu *****/
-h2 {
-  padding-left: 20px;
-}
-h2 span {
-  border-bottom: #99e2d0 solid 2px;
-  border-spacing: 20px;
+section {
+  background-color: #f6f6f6;
 }
 
 .background {
@@ -73,18 +78,57 @@ h2 span {
   height: 40px;
 }
 
-section {
-  background-color: #f6f6f6;
-}
-
+/**** début de la carte *****/
 .menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.menu span {
+.menu h3 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
+  margin: 0px;
+}
+
+h2 {
+  padding-left: 20px;
+  font-weight: 300;
+}
+h2 span {
+  font-size: 28px;
+  border-bottom: #99e2d0 solid 2px;
+  border-spacing: 20px;
+}
+
+/*** animation coeur ***/
+.heart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 50px;
+}
+.heart svg {
+  width: 23px;
+  height: 21px;
+  fill: none;
+  stroke: #101010;
+}
+.heart:hover .coeur {
+  transform: scale(1);
+}
+.heart .coeur {
+  position: absolute;
+  fill: url(#paint0_linear_1_250);
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: 1s;
+}
+
+/*****  comosition et disposition des cards  ****/
+.card__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card {
@@ -100,6 +144,7 @@ section {
   min-width: 150px;
   margin-bottom: 15px;
   overflow: hidden;
+  /**** élément animer ****/
 }
 .composition__flex {
   flex-direction: column;
@@ -152,26 +197,11 @@ section {
   font-size: 20px;
 }
 
-.fa-solid {
-  --fa-display: flex ;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.card__flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/****  bouton de commande ****/
 .exploration {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   padding-bottom: 40px;
   padding-top: 30px;
 }
@@ -180,8 +210,6 @@ a {
   font-weight: 700;
   font-size: 16px;
   border-radius: 39px;
-  box-sizing: border-box;
-  text-decoration: none;
   box-shadow: 1px 5px 10px grey;
   transition-duration: 1s;
   background: linear-gradient(to top, var(--main-color), var(--secondary-color));
@@ -190,10 +218,6 @@ a {
 .exploration a:hover {
   opacity: 0.8;
   box-shadow: none;
-}
-
-main {
-  margin: 0px;
 }
 
 /******** footer *******/
@@ -221,12 +245,17 @@ footer .fa-margin-footer {
   padding-right: 10px;
 }
 
+/**** mise en forme pour destock *****/
 @media all and (min-width: 769px) and (max-width: 1440px) {
   .main-container {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
   }
+  img {
+    height: 350px;
+  }
+  /*****  gestion de la page et article ******/
   section {
     display: flex;
     justify-content: center;
@@ -248,16 +277,15 @@ footer .fa-margin-footer {
   section .secondary-container article a {
     width: 70%;
   }
+  /**** début de la carte ****/
   .menu {
     display: flex;
     justify-content: center;
   }
-  .menu span {
+  .menu h3 {
     margin-right: 20px;
   }
-  img {
-    height: 350px;
-  }
+  /**** Footer *****/
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -273,6 +301,7 @@ footer .fa-margin-footer {
     align-items: baseline;
   }
 }
+/*** animation des article ***/
 .Entré {
   animation: apparition 1.2s 1s;
   transform: scaleY(0) scaleX(1);

@@ -7,7 +7,7 @@
 :root {
     --main-color: #9356dc;
     --secondary-color: #ff79da;
-    ---third-color: #99e2d0;
+    --third-color: #99e2d0;
 }
 
 .main-container {
@@ -18,7 +18,7 @@
 }
 
 .fa-solid {    
-    display: flex;
+    --fa-display: flex;
     align-items: center;
 }
 
@@ -27,6 +27,10 @@
     display: inline-block;
     flex-wrap: wrap;
     align-content: center;
+}
+
+.title {
+    font-family: 'Shrikhand', cursive; 
 }
 
 a {
@@ -89,17 +93,56 @@ section {
     justify-content: space-around;
     align-items: center;
 
-    h2 {
-        padding-left: 20px;
-
-    span {
-        font-family: 'Shrikhand', cursive;
-        font-size: 28px; 
-        border-bottom: #99e2d0 solid 2px;
-        border-spacing: 20px;
+    h3 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 28px; 
+    margin: 0px;
+    
     }
+   
+}
+
+h2 {
+    padding-left: 20px;
+    font-weight: 300;
+
+span {
+   
+    font-size: 28px; 
+    border-bottom: #99e2d0 solid 2px;
+    border-spacing: 20px;
 }
 }
+
+/*** animation coeur ***/
+
+.heart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 50px;
+   
+       svg {
+        width:23px ; 
+        height:21px; 
+        fill:none;
+        stroke:#101010;
+       }
+    
+       &:hover {
+        .coeur {
+            transform: scale(1);
+        }  
+       }
+        .coeur {
+            position: absolute;
+            fill:url(#paint0_linear_1_250);
+            transform: scale(0);
+            transform-origin: bottom;
+            transition: 1s;
+            
+        }
+   }
 
 /*****  comosition et disposition des cards  ****/
 
@@ -196,8 +239,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;   
-
-    text-align: center;
     padding-bottom: 40px;
     padding-top:  30px;
 
@@ -207,9 +248,7 @@ section {
         font-size: 16px;
         border-radius: 39px;
         box-shadow: 1px 5px 10px grey;
-        transition-duration: 1s;  
-        box-sizing: border-box;
-        text-decoration: none;          
+        transition-duration: 1s;          
 
         &:hover {
             opacity: 0.8 ;
@@ -298,7 +337,7 @@ footer {
     
     justify-content: center;
 
-    span {
+    h3 {
         margin-right: 20px;
     }
    }
