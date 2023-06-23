@@ -49,9 +49,13 @@ header div {
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
+  height: 63px;
 }
 header div h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  height: 43px;
 }
 
 /***** img ****/
@@ -116,11 +120,19 @@ h2 span {
 .heart:hover .coeur {
   transform: scale(1);
 }
+.heart:hover .hidden {
+  opacity: 0;
+}
 .heart .coeur {
   position: absolute;
   fill: url(#paint0_linear_1_250);
   transform: scale(0);
   transform-origin: bottom;
+  transition: 1s;
+  stroke: none;
+}
+.heart .hidden {
+  opacity: 1;
   transition: 1s;
 }
 
@@ -149,6 +161,7 @@ h2 span {
 .composition__flex {
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 }
 .composition__flex h3 {
   font-weight: 700;
@@ -182,12 +195,14 @@ h2 span {
 }
 .composition:hover .composition__block {
   transform: scaleX(1) scaleY(1) !important;
+  width: 41px !important;
 }
 .composition__block {
   display: flex;
   transition-duration: 1000ms;
   transform-origin: right;
   transform: scaleX(0) scaleY(1);
+  width: 0px;
 }
 .composition__block--content {
   background-color: #99e2d0;
@@ -243,6 +258,9 @@ footer div span {
 }
 footer .fa-margin-footer {
   padding-right: 10px;
+}
+footer a {
+  color: white;
 }
 
 /**** mise en forme pour destock *****/

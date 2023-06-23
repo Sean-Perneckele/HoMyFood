@@ -18,13 +18,16 @@
 }
 
 /*** Header  ****/
-.title {
-  font-family: "Shrikhand", cursive;
-}
-
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 63px;
+}
+header .title {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  height: 43px;
 }
 
 /***** section 1 exploration ****/
@@ -41,12 +44,22 @@ header {
   background-color: #EAEAEA;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 15px 0px;
   font-size: 16px;
 }
 .exploration__location .fa-location-dot {
-  padding: 0px 10px;
+  padding-right: 15px;
+}
+.exploration__location input {
+  border: none;
+  background-color: #EAEAEA;
+  font-size: 16px;
+  width: 110px;
+}
+.exploration__location input::placeholder {
+  color: #101010;
 }
 .exploration__title {
   font-weight: 700;
@@ -217,11 +230,19 @@ header {
 .restaurant__content--heart:hover .coeur {
   transform: scale(1);
 }
+.restaurant__content--heart:hover .hidden {
+  opacity: 0;
+}
 .restaurant__content--heart .coeur {
   position: absolute;
   fill: url(#paint0_linear_1_250);
   transform: scale(0);
   transform-origin: bottom;
+  transition: 1s;
+  stroke: none;
+}
+.restaurant__content--heart .hidden {
+  opacity: 1;
   transition: 1s;
 }
 
@@ -251,6 +272,9 @@ footer div span {
 }
 footer .fa-margin-footer {
   padding-right: 10px;
+}
+footer a {
+  color: white;
 }
 
 /***  disposition ordinateur  ***/
@@ -378,4 +402,4 @@ footer .fa-margin-footer {
   }
 }
 
-/*# sourceMappingURL=style.css.map *
+/*# sourceMappingURL=style.css.map */
